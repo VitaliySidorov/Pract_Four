@@ -9,7 +9,7 @@ Console.Write("Первое число ");
 int numA = ReadNumber();
 Console.Write("Второе число ");
 int numB = ReadNumber();
-if (numB < 0)
+if (numB < 0) // Проверка на отрицательный показатель степени и приведение его к натуральному виду
 {
     Console.WriteLine("Показатель степени приведен к натуральному виду.");
     numB *= -1;
