@@ -9,8 +9,13 @@ Console.Write("Первое число ");
 int numA = ReadNumber();
 Console.Write("Второе число ");
 int numB = ReadNumber();
+if (numB < 0)
+{
+    Console.WriteLine("Показатель степени приведен к натуральному виду.");
+    numB *= -1;
+}
 Console.WriteLine();
-Console.WriteLine($"{numA} в степени {Math.Abs(numB)} равно {Exponentiation(numA, numB)}.");
+Console.WriteLine($"{numA} в степени {numB} равно {Exponentiation(numA, numB)}.");
 
 int ReadNumber() // Метод проверки соответствия вводимого числа условиям задачи
 {
@@ -23,18 +28,15 @@ int ReadNumber() // Метод проверки соответствия вво�
         else Console.WriteLine("Не удалось распознать требуемое число, попробуйте еще раз.");
     }
 }
-double Exponentiation(int n, int m)
+double Exponentiation(int num, int pow)
 {
-    int level = m;
-    if (level < 0)
+    if(pow == 0)
     {
-        Console.WriteLine("Показатель степени приведен к натуральному виду.");
-        level = m * (-1);
+        return 1;
     }
-    double result = 1;
-    for (int i = 1; i <= level; i++)
+    if(pow == 1)
     {
-        result *= n;
+        return num;
     }
-    return result;
+    return num * Exponentiation(num, --pow);;
 }

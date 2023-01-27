@@ -5,6 +5,11 @@
 // 9012 -> 12
 
 Console.Clear();
+Console.Write("Введите число для определения суммы цифр в нём: ");
+int num = ReadNumber();
+Console.WriteLine();
+Console.WriteLine($"Сумма цифр числа {num} равна {SumNumbers(num)}.");
+
 int ReadNumber() // Метод проверки соответствия вводимого числа условиям задачи
 {
     while (true)
@@ -30,9 +35,3 @@ int SumNumbers (int number)
     }
     return result;
 }
-
-Console.Write("Введите число для определения суммы цифр в нём: ");
-int num = ReadNumber();
-
-Console.WriteLine();
-Console.WriteLine($"Сумма цифр числа {num} равна {SumNumbers(num)}.");
