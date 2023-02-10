@@ -1,5 +1,5 @@
 # Pract_Four
-## Introduction to programming languages (seminars). Lesson 4
+## Introduction to programming languages (seminars). Lesson 4. Functions.
 
 **Problem 25:** Write a loop that takes two numbers (A and B) as input and raises A to the power of B.
 </br>3, 5 -> 243 (3⁵)
